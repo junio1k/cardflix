@@ -1,0 +1,13 @@
+.star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star .star {
+  transition: color 0.2s;
+}
+
+.star .star.filled {
+  color: #FFD700;
+}

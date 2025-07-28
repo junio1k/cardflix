@@ -1,0 +1,8 @@
+{
+    "Cards": [
+        {"id": 1, "nome": "Batman", "genre": "Filmes", "img": "https://github.com/junio1K.png"},
+        {
+            "id": 2, "nome": "Iron man", "genre": "Filmes", "img": "https://th.bing.com/th/id/R.116aafe9ddbca3d43cdc7419cec349bb?rik=1K5qA8uMFi9XvA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-lBa2f-25gYo%2fUWcu2JuaR8I%2fAAAAAAAABy4%2fECOHa17RHY0%2fs1600%2f001.jpg&ehk=nfDJzK3nR0nBs%2fPW0l6lmZTrZc%2f9%2fIbO1LYgkhqJPM0%3d&risl=&pid=ImgRaw&r=0"
+        }
+    ]
+}
