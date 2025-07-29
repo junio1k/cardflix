@@ -4,7 +4,7 @@ import './App.css';
 import Card from './componentes/Card';
 import Formulario from './componentes/Formulario';
 import Navegador from './componentes/Menu';
-import axios from 'axios'
+
 
   const cards = [
     {nome: "Filme"},

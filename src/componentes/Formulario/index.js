@@ -1,13 +1,24 @@
 import { useState } from "react";
+import axios from 'axios'
 import Button from "../Button";
 import Campotexto from "../Input";
 import ListaSuspensa from "../ListaSuspensa";
 import "./formulario.css";
 
+
 const Formulario = (props) => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
+        // Adicionando arquivos ao json api/apiCard.json
+        axios.post('http://localhost:3001/Cards' , {
+            nome: nome,
+            img: foto,
+            genre: lista
+        })
+        .then(response => console.log('Card Adicionado', response.data))
+        .catch(erro => console.log(erro))
+
         props.aoNovoCardCadastrado({
             nome,
             data,

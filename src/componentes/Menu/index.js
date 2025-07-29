@@ -88,13 +88,15 @@ const Navegador = ({ valor, aoPesquisar }) => {
         <li><a>Animes</a></li>
       </ul>
 
-      <input value={valor} onChange={aoPesquisado} placeholder="Digite o nome..." />
-      <button onClick={searchServer}>
-        <img className="lupa" src="./lupa.png" alt="Buscar" />
-      </button>
+      <div className="button-input_nav">
+        <input className="input-nav" value={valor} onChange={aoPesquisado} placeholder="Digite o nome do card..." />
+        <button clasName="button-nav" onClick={searchServer}>
+          Buscar
+        </button>
+      </div>
 
       {/* Exibe os resultados abaixo */}
-      <div>
+      <div className="nav-results">
         {resultados.length > 0 ? (
           resultados.map(card => (
             <div key={card.id}>
@@ -104,7 +106,7 @@ const Navegador = ({ valor, aoPesquisar }) => {
             </div>
           ))
         ) : (
-          <p>Nenhum resultado encontrado</p>
+          <p></p>
         )}
       </div>
     </nav>
