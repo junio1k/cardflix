@@ -35,32 +35,34 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Insira as informações sobre seu card favorito.</h2>
-                <Campotexto 
-                inputLabel="Nome"
-                obrigatorio={true} 
-                valor={nome} 
-                aoAlterado={valor => setNome(valor)} 
-                placeholder = "Nome" />
-                <Campotexto 
-                inputLabel="Data"
-                obrigatorio={true} 
-                valor={data} 
-                aoAlterado={valor => setData(valor)}  
-                placeholder = "Data de lançamento"/>
-                <Campotexto 
-                inputLabel="Foto"
-                obrigatorio={true} 
-                valor={foto} 
-                aoAlterado={valor => 
-                setFoto(valor)} 
-                placeholder = "Foto" />
-                <ListaSuspensa 
-                obrigatorio={true} 
-                categorias={props.time}
-                valor={lista} 
-                aoAlterado={valor => setLista(valor)}
-                />
+                <div className="form-Submit">
+                    <h2>Insira as informações sobre seu card favorito.</h2>
+                    <Campotexto
+                    inputLabel="Nome"
+                    obrigatorio={true}
+                    valor={nome}
+                    aoAlterado={valor => setNome(valor)}
+                    placeholder = "Nome" />
+                    <Campotexto
+                    inputLabel="Data"
+                    obrigatorio={true}
+                    valor={data}
+                    aoAlterado={valor => setData(valor)}
+                    placeholder = "Data de lançamento"/>
+                    <Campotexto
+                    inputLabel="Foto"
+                    obrigatorio={true}
+                    valor={foto}
+                    aoAlterado={valor =>
+                    setFoto(valor)}
+                    placeholder = "Foto" />
+                    <ListaSuspensa
+                    obrigatorio={true}
+                    categorias={props.time}
+                    valor={lista}
+                    aoAlterado={valor => setLista(valor)}
+                    />
+                </div>
                 
                 <Button>
                     Criar Card

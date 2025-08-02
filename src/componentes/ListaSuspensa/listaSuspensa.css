@@ -1,0 +1,22 @@
+.lista-suspensa {
+  background-color: #D9D9D9;
+  border: none;
+  padding: 12px;
+  margin-top: 12px;
+  width: 500px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 20px;
+  outline: none;
+
+  text-align: center;
+}
+
+.lista-suspensa select::after{
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}

@@ -100,16 +100,18 @@ const Navegador = ({ valor, aoPesquisar }) => {
         {resultados.length > 0 ? (
           resultados.map(card => (
             <div key={card.id}>
-              <p>{card.nome}</p>
-              <img src={card.img} alt={card.nome} width={100} />
-              <p>{card.genre}</p>
+              <p className="results-name">{card.nome}</p>
+              <img src={card.img} alt={card.nome} width={150} />
+              <p className="results-genre">{card.genre}</p>
             </div>
           ))
         ) : (
           <p></p>
         )}
       </div>
+      <hr></hr>
     </nav>
+    
   );
 };
 

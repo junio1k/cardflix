@@ -7,9 +7,9 @@ import Navegador from './componentes/Menu';
 
 
   const cards = [
-    {nome: "Filme"},
-    {nome: "Série"},
-    {nome: "Anime"}
+    {nome: "Filme", corPrimaria:"#506266", corSecundaria:"#6d858aff" },
+    {nome: "Série", corPrimaria:"#CA2508", corSecundaria:"#bd4631ff"},
+    {nome: "Anime",corPrimaria:"#140000", corSecundaria:"#494343ff"}
   ];
  
   function App() {
@@ -19,7 +19,6 @@ import Navegador from './componentes/Menu';
       setColaboradores([...colaboradores, colaborador]);
     }
     const deleteCard = (nome) => {
-      alert('Fui clicado')
       setColaboradores(prevCard => prevCard.filter(cardCheck => cardCheck.nome !== nome))
     }
     
@@ -36,15 +35,19 @@ import Navegador from './componentes/Menu';
       .catch(error => console.error(error))
     }, [])*/
   return(
-    <div>
+    <div className='app-cardflix'>
       <Navegador 
       valor={pesquisa} 
       aoPesquisar={search => searchCard(search)}
       />
-      <Formulario  time={cards.map( nome => nome.nome)} aoNovoCardCadastrado={card => cardCadastrado(card)}/>
+      <div className='app-form'>
+        <Formulario time={cards.map( nome => nome.nome)} aoNovoCardCadastrado={card => cardCadastrado(card)}/>
+      </div>
       {cards.map( card =>  <Card 
       key={card.nome}
       time={card.nome}
+      corPrimaria={card.corPrimaria}
+      corSecundaria={card.corSecundaria}
       colaboradores={colaboradores.filter(colaborador => colaborador.lista === card.nome)}
       onDelete = {deleteCard}
       />)}
