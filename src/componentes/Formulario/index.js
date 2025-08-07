@@ -3,6 +3,8 @@ import axios from 'axios'
 import Button from "../Button";
 import Campotexto from "../Input";
 import ListaSuspensa from "../ListaSuspensa";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./formulario.css";
 
 
@@ -26,6 +28,7 @@ const Formulario = (props) => {
             lista
         })
         console.log("card salvo",nome , data, foto, lista)
+        setLista('');
     }
     const [nome, setNome] = useState('');
     const [data, setData] = useState('');
@@ -36,7 +39,7 @@ const Formulario = (props) => {
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <div className="form-Submit">
-                    <h2>Insira as informações sobre seu card favorito.</h2>
+                    <h2>Insira as informações <span className="h2_span">sobre seu card favorito</span>.</h2>
                     <Campotexto
                     inputLabel="Nome"
                     obrigatorio={true}
@@ -44,11 +47,12 @@ const Formulario = (props) => {
                     aoAlterado={valor => setNome(valor)}
                     placeholder = "Nome" />
                     <Campotexto
-                    inputLabel="Data"
+                    inputLabel="Genero"
                     obrigatorio={true}
                     valor={data}
                     aoAlterado={valor => setData(valor)}
-                    placeholder = "Data de lançamento"/>
+                    dateFormat="dd/MM/yyyy"
+                    placeholder = "Genero"/>
                     <Campotexto
                     inputLabel="Foto"
                     obrigatorio={true}
@@ -57,6 +61,7 @@ const Formulario = (props) => {
                     setFoto(valor)}
                     placeholder = "Foto" />
                     <ListaSuspensa
+                    label='Categoria'
                     obrigatorio={true}
                     categorias={props.time}
                     valor={lista}

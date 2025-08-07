@@ -1,4 +1,10 @@
-.lista-suspensa {
+.lista-suspensa{
+  margin-top: 12px;
+}
+
+
+.lista-suspensa select {
+  display: flex;
   background-color: #D9D9D9;
   border: none;
   padding: 12px;
@@ -9,8 +15,14 @@
   font-weight: 700;
   border-radius: 20px;
   outline: none;
-
   text-align: center;
+}
+
+.lista-suspensa label{
+  margin-left: 8px;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .lista-suspensa select::after{

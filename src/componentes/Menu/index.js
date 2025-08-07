@@ -79,7 +79,7 @@ const Navegador = ({ valor, aoPesquisar }) => {
   return (
     <nav className="nav">
       <div className="title-nav">
-        <h1>CardFlix</h1>
+        <h1>Card<span>Flix</span></h1>
       </div>
 
       <ul className="nav-list">

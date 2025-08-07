@@ -8,7 +8,8 @@ const InfoCards = ({nome, data, foto, onDelete}) => {
             </div>
             <h4>{nome}</h4>
             <h5>{data}</h5>
-            <button onClick={()=> onDelete(nome)}>Excluir</button>
+            <button className="button-delete" onClick={()=> onDelete(nome)}>X</button>
+            
             <StarRating />
         </div>
     );

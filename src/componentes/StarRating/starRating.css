@@ -1,7 +1,9 @@
 .star {
-  font-size: 2rem;
-  color: #ccc;
+  font-size: 1.3rem;
+  color: #faf7f7;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .star .star {

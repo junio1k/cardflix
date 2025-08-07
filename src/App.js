@@ -43,7 +43,7 @@ import Navegador from './componentes/Menu';
       <div className='app-form'>
         <Formulario time={cards.map( nome => nome.nome)} aoNovoCardCadastrado={card => cardCadastrado(card)}/>
       </div>
-      {cards.map( card =>  <Card 
+      {cards.map( card => <Card 
       key={card.nome}
       time={card.nome}
       corPrimaria={card.corPrimaria}
